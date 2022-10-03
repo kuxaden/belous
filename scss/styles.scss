@@ -1,0 +1,198 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'libs';
+@import 'global';
+
+.header{
+    background-color: $bcg;
+    &__inner {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        height: 620px;
+    }
+}
+.logo_img {
+    position: relative;
+    display: block;
+    height: 620px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    right: 0px;
+    z-index: 1;
+}
+.navbar{
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+.nav {
+    display: flex;
+    margin-top: 20px;
+    &-item {
+        padding: 0px 20px;
+
+    }
+    &-link {
+        @extend %menu-btn;
+        font-family: "Caveat";
+        color: $fonts;
+        font-size: 22px;
+    }
+}
+.header__info {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    position: absolute;
+    bottom: 40px;
+    z-index: 2;
+    color: $fonts;
+    font-family: "Roboto";
+    padding: 10px 15px 10px 35px;
+    border-radius: 5px;
+    background-color: rgba(128, 0, 128, 0.1); ;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    &-title {
+        margin-left: 35px;
+        font-size: 18px;
+    }
+    &-text {
+        margin: 10px 0;
+        font-size: 56px;
+        font-family: "Caveat";
+        color: inherit;
+    }
+    &-btn {
+        margin: 5px;
+        background-color: transparent;
+        max-width: 220px;
+        @extend %menu-btn;
+    }
+    &-btn a {
+        color: $fonts;
+    }
+}
+
+// FOOTER //
+.footer {
+    background-color: $bcg;
+    &__inner {
+        height: 120px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__social-list {
+        margin: 30px 0;
+        display: inline-block;
+    }
+    &__social-link,
+    &__contacts-link {
+        padding: 0 10px;
+        font-family: "Caveat";
+        font-size: 22px;
+        color: $fonts;
+        padding-left: 28px;
+        @extend %menu-btn;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top:8px;
+            width: 16px;
+            height: 16px;
+        }
+    }
+    &__social-link--facebook::before {
+        background-image: url(../img/facebook-square.svg);
+        width: 17px;
+        height: 20px;
+    }
+    &__social-link--instagram::before {
+        background-image: url(../img/instagram.svg);
+        width: 18px;
+        height: 20px;
+    }
+    &__contacts-link--mail::before {
+        background-image: url(../img/envelope.svg);
+        width: 20px;
+        height: 20px;
+    }
+}
+
+// MAIN
+.about .container,
+.contacts .container {
+    background-color: #FFE4B5;
+    margin-top: 50px;
+}
+// About
+.about {
+    &__inner-title {
+        text-align: center;
+        color: $fonts;
+        margin-top: 20px;
+        font-size: 24px;
+        font-family: "Caveat";
+    }
+    &__inner-text {
+        font-size: 16px;
+    }
+    &__img img {
+        display: block;
+        max-height: 600px;
+        height: 100%;
+        max-width: 600px;
+        width: 100%;
+    }
+}
+
+// Gallery
+.gallery .container,
+.price .container {
+    background-color: $bcg;
+    margin-top: 50px;
+}
+.gallery {
+    &__title {
+        @extend %title-font;
+    }
+}
+.carousel {
+    &-item img {
+    max-height: 700px;
+    margin: 0 auto;
+    }
+}
+// Price
+.price {
+    &__title {
+        @extend %title-font;
+
+    }
+}
+
+// Contacts
+.contacts {
+    &__title {
+        @extend %title-font;
+    }
+    &_item {
+        margin: 25px;
+    }
+    &_item a {
+    text-decoration:none; 
+    color: $fonts;
+    padding: 10px;
+    border-radius: 10px 0 10px 0;
+    }
+}
+
+@import 'media';

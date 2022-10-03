@@ -1,0 +1,29 @@
+$fonts: maroon;
+$fonts2: #8B008B;
+$bcg: #fed0d2; // 
+%title-font{
+    font-family: "Caveat";
+    font-size: 24px;
+    color: $fonts;
+    text-align: center;
+}
+%menu-btn {
+    position: relative;
+    &:hover {
+        color: inherit;
+        border-radius: 5px;
+        background-color: rgba(128, 0, 128, 0.1); ;
+        backdrop-filter: blur(3px);
+        -webkit-backdrop-filter: blur(3px);
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: $fonts;
+            height: 2px;
+            width: 100%;
+        }
+    }
+}
+
