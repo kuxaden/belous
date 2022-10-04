@@ -5,7 +5,10 @@
 @import 'global';
 
 .header{
-    background-color: $bcg;
+    -webkit-box-shadow: 3px 3px 5px 1px $shadow1;
+    -moz-box-shadow: 3px 3px 5px 1px $shadow1;
+    box-shadow: 3px 3px 5px 1px $shadow1;
+    background-color: $bcg1;
     &__inner {
         position: relative;
         display: flex;
@@ -81,7 +84,7 @@
 
 // FOOTER //
 .footer {
-    background-color: $bcg;
+    background-color: $bcg1;
     &__inner {
         height: 120px;
         display: flex;
@@ -129,16 +132,20 @@
 
 // MAIN
 .about .container,
-.contacts .container {
-    background-color: #FFE4B5;
-    margin-top: 50px;
+.contacts .container,
+.portfolio .container {
+    background-color: $bcg2;
+    -webkit-box-shadow: 3px 3px 5px 1px $shadow2;
+    -moz-box-shadow: 3px 3px 5px 1px $shadow2;
+    box-shadow: 3px 3px 5px 1px $shadow2;
+    margin-top: 30px;
 }
 // About
 .about {
     &__inner-title {
         text-align: center;
         color: $fonts;
-        margin-top: 20px;
+        margin-top: 60px;
         font-size: 24px;
         font-family: "Caveat";
     }
@@ -146,42 +153,155 @@
         font-size: 16px;
     }
     &__img img {
+        margin: 50px auto;
         display: block;
-        max-height: 600px;
+        max-height: 500px;
         height: 100%;
-        max-width: 600px;
+        max-width: 500px;
         width: 100%;
     }
+    @extend %kolco;
 }
 
 // Gallery
 .gallery .container,
-.price .container {
-    background-color: $bcg;
-    margin-top: 50px;
+.price > .container {
+    background-color: $bcg1;
+    -webkit-box-shadow: 3px 3px 5px 1px $shadow1;
+    -moz-box-shadow: 3px 3px 5px 1px $shadow1;
+    box-shadow: 3px 3px 5px 1px $shadow1;
+    margin-top: 30px;
 }
 .gallery {
     &__title {
+        margin-top: 40px;
         @extend %title-font;
     }
+    @extend %kolco;
 }
-.carousel {
-    &-item img {
-    max-height: 700px;
-    margin: 0 auto;
+.video-container {
+    height: 750px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 15px;
+    align-items: flex-start;
+    padding: 5px 5%;
+    .video-list {
+        display: flex;
+        flex-wrap: wrap;
+        background: $bcg2;
+        border-radius: 5px;
+        height: 650px;
+        overflow-y: scroll;
     }
+    .video-list .vid {
+        align-items: center;
+        gap: 15px;
+        background: #f7f7f7;
+        border-radius: 5px;
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid rgba(0,0,0,.1);
+        cursor: pointer;
+    }
+    .video-list .vid:hover {
+        background: #eee;
+    }
+    .video-list .vid.active {
+        background: #2980b4;
+    }
+    .video-list .vid.active .video-title {
+        color: #fff;
+    }
+
+    .video-list .vid video {
+        width: 150px;
+        border-radius: 5px;
+    }
+    .video-list::-webkit-scrollbar {
+        width: 7px;
+    }
+    .video-list::-webkit-scrollbar-track {
+        background: #ccc;
+        border-radius: 50px;
+    }
+    .video-list::-webkit-scrollbar-thumb {
+        background: #666;
+        border-radius: 50px;
+    }
+}
+.video-container .main-video {
+    background: $bcg2;
+    border-radius: 5px;
+    padding: 10px;
+    video { 
+        max-height: 600px;
+        width: 100%;
+        border-radius: 5px;
+    }
+    .video-title {
+        color:#333;
+        font-size: 23px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}
+.video-container .main-video .video {
+    height: 650px;
+}
+
+
+// Portfolio
+.portfolio {
+    &__title {
+        margin-top: 40px;
+        @extend %title-font;
+    }
+    &__cards-item {
+        margin-bottom: 40px;
+    }
+    @extend %kolco;
+    &__gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-bottom: 50px;
+    }
+    
+}
+.gallery-item__thumb {
+    -webkit-box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.75);
+    object-fit: cover;
+    margin: 10px;
+    height: 320px;
+    width: 280px;
+    border-radius: 10px;
+    &:hover {
+        transform: scale(1.05);
+    }
+
 }
 // Price
 .price {
     &__title {
+        margin-top: 40px;
         @extend %title-font;
 
     }
+    & .table {
+        margin-bottom: 80px;
+    }
+    @extend %kolco;
+
 }
 
 // Contacts
 .contacts {
     &__title {
+        margin-top: 40px;
         @extend %title-font;
     }
     &_item {
@@ -193,6 +313,7 @@
     padding: 10px;
     border-radius: 10px 0 10px 0;
     }
-}
+    @extend %kolco;
 
+}
 @import 'media';

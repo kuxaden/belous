@@ -19,21 +19,21 @@ const paths = {
     },
     styles: {
         src: ['scss/styles/**/*.sass', 'scss/**/*.scss'],
-        dest: './css/'
+        dest: 'css/'
     },
     scripts: {
         src: 'scripts/**/*.js',
-        dest: './js/'
+        dest: 'js/'
     },
     images: {
         src: 'images/**',
-        dest: './img/'
+        dest: 'img/'
     }
     
 }
 // Очистка каталога dist;
 function clean(){
-    return del(['css/*','js/', '!img'])
+    return del(['css/*','js/*', '!img', '!css/baguetteBox.min.css', '!js/baguetteBox.min.js'])
 }
 // Сжатие HTML
 function html() {

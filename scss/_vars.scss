@@ -1,6 +1,9 @@
 $fonts: maroon;
 $fonts2: #8B008B;
-$bcg: #fed0d2; // 
+$bcg1: #fed0d2; // цвет фона логотипа
+$bcg2: #FFEFD5; //PapayaWhip
+$shadow1: rgb(177, 126, 177);
+$shadow2: rgba(179,153,111,1);
 %title-font{
     font-family: "Caveat";
     font-size: 24px;
@@ -24,6 +27,21 @@ $bcg: #fed0d2; //
             height: 2px;
             width: 100%;
         }
+    }
+}
+%kolco {
+    .kolco-box {
+        position: relative;
+        z-index: 3;
+    }
+    .kolco {
+        position: absolute;
+        background-position: 50%;
+        top: -55px;
+        height: 80px;
+        width: 100%;
+        background-image: url(../img/kolco_6.svg);
+        background-repeat: repeat;
     }
 }
 

@@ -21,14 +21,19 @@
     .navbar{
         width: max-content;
     }
+    .video-container {
+        grid-template-columns: 1.5fr 1fr;
+        padding: 10px;
+    }
 }
-.navbar-toggler {
-}
+
 @media (max-width: 840px){
   
 }
 @media (max-width: 768px){
-    .logo_img {
+    .video-container {
+        grid-template-columns: 1fr;
+        padding: 10px;
     }
 }
 @media (max-width: 650px){
