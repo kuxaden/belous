@@ -25,19 +25,70 @@
         grid-template-columns: 1.5fr 1fr;
         padding: 10px;
     }
+    .portfolio {
+        &__gallery {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
 }
 
 @media (max-width: 840px){
-  
-}
-@media (max-width: 768px){
     .video-container {
         grid-template-columns: 1fr;
-        padding: 10px;
+        padding: 10px 10px 50px 10px;
+        .video-list {
+            flex-wrap: nowrap;
+            height: 230px;
+            overflow-x: scroll;
+            overflow-y: hidden;
+        }
+        .video-list .vid video {
+            width: 80px;
+        }
+        .video-list::-webkit-scrollbar {
+            height: 7px;
+        }
     }
 }
+@media (max-width: 768px){
+
+}
 @media (max-width: 650px){
-    
+    .header__info {
+        &-title {
+            color: #fff;
+        }
+        &-text {
+            .ira_name {
+                color: #fff;
+            }
+        }
+        &-btn {
+            background-color: rgba(128, 0, 128, 0.4);
+        }
+        &-btn a {
+            color: #fff;
+        }
+    }
+}
+@media (max-width: 576px){
+    .about {
+        &__inner-title {
+            margin-top: 0;
+        }
+        &__inner-text {
+            font-size: 16px;
+            margin-bottom: 50px;
+        }
+        &__img img {
+            min-height: 400px;
+            object-fit: cover;
+            margin: 50px auto 10px;
+            padding: 10px;
+        }
+        @extend %kolco;
+    }
+
 }
 @media (max-width: 540px){
     .navbar-nav{
@@ -54,4 +105,6 @@
     
         }
     }
+
+    
 }

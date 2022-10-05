@@ -52,13 +52,15 @@
             <h1 class="header__info-title">
               Візажист Бровіст
             </h1>
-            <h3 class="header__info-text">Привіт, <b>Я Іра</b></h3>
-            <button class="header__info-btn btn btn-light">
-              <a href="#portfolio">Переглянути портфоліо</a>
-            </button>
-            <button class="header__info-btn btn btn-light">
-              <a href="mailto:irabelous376@ukr.net">Написати мені</a>
-            </button>
+            <h3 class="header__info-text">Привіт, <b class="ira_name">Я Іра</b></h3>
+            <div class="btn_block d-flex">
+              <button class="header__info-btn btn btn-light">
+                <a href="#portfolio">Портфоліо</a>
+              </button>
+              <button class="header__info-btn btn btn-light">
+                <a href="mailto:irabelous376@ukr.net">Написати мені</a>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -72,19 +74,16 @@
             </div>
           </div>
           <div class="row">
-            <div class="about__img col-sm-4 col-md-4 col-xl-6 col-lg-4">
+            <div class="about__img col-sm-4 col-md-4 col-xl-4 col-lg-4">
               <img src="img/content/about.JPEG" alt="">
             </div>
-            <div class="about__inner col-sm-8 col-md-8 col-xl-6 col-lg-8">
+            <div class="about__inner col-sm-8 col-md-8 col-xl-8 col-lg-8">
               <h2 class="about__inner-title">Про мене</h2><br>
               <p class="about__inner-text ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus debitis
                 asperiores eaque atque voluptatum reprehenderit sint officiis, molestiae vero unde iusto distinctio modi
-                sapiente, eligendi explicabo veniam sunt veritatis tenetur.</p><br>
-              <p class="about__inner-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod facere porro
-                obcaecati vitae nesciunt. Itaque officia voluptate explicabo voluptatum blanditiis dolorum, minima alias
-                nobis a nemo. Placeat ut provident, odit voluptates neque fugiat sequi harum!</p><br>
-              <p class="about__inner-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor expedita
-                nesciunt quia cum ratione enim. Illo totam libero dolor asperiores.</p><br>
+                sapiente, eligendi explicabo veniam sunt veritatis tenetur.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto assumenda porro sapiente ut eveniet inventore, ea commodi explicabo illo, pariatur iste voluptate vero saepe cum accusamus, facilis temporibus animi omnis velit nulla laborum nesciunt? Id a voluptatum numquam laudantium facere?
+              </p>
             </div>
           </div>
         </div>
@@ -105,16 +104,16 @@
           <div class="video-container">
             <div class="main-video">
               <div class="video">
-                <video src="video/video_01.mov" controls muted autoplay></video>
+                <video src="video/video_01.mp4" controls muted autoplay></video>
                 <h3 class="video-title">1. Video</h3>
               </div>
             </div>
             <div class="video-list">
-              <div class="vid active">
+              <div class="vid">
                 <video src="video/video_01.mp4" muted></video>
                 <h3 class="video-title">1. Video</h3>
               </div>
-              <div class="vid">
+              <div class="vid active">
                 <video src="video/video_02.mp4" muted></video>
                 <h3 class="video-title">2. Video</h3>
               </div>
@@ -336,6 +335,11 @@
     });
   </script>
   <script src="js/baguetteBox.min.js"></script>
+  <script>
+    window.onload = function() {
+    baguetteBox.run('.portfolio__gallery');
+  };
+  </script>
   
   <script src="js/main.min.js"></script>
 </body>
