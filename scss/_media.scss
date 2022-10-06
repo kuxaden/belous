@@ -22,8 +22,7 @@
         width: max-content;
     }
     .video-container {
-        grid-template-columns: 1.5fr 1fr;
-        padding: 10px;
+        grid-template-columns: 1fr 1fr;
     }
     .portfolio {
         &__gallery {
@@ -34,24 +33,26 @@
 
 @media (max-width: 840px){
     .video-container {
+        grid-template-columns: 1.5fr 1fr;
+    }
+}
+@media (max-width: 768px){
+    .video-container {
         grid-template-columns: 1fr;
         padding: 10px 10px 50px 10px;
         .video-list {
             flex-wrap: nowrap;
-            height: 230px;
+            height: 260px;
             overflow-x: scroll;
             overflow-y: hidden;
         }
         .video-list .vid video {
-            width: 80px;
+            width: 100px;
         }
         .video-list::-webkit-scrollbar {
             height: 7px;
         }
     }
-}
-@media (max-width: 768px){
-
 }
 @media (max-width: 650px){
     .header__info {
