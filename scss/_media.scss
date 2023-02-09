@@ -29,6 +29,14 @@
             grid-template-columns: repeat(3, 1fr);
         }
     }
+    .contacts {
+        .adress_block {
+            padding-bottom: 15px;
+        }
+        .adress_info {
+            height: 100%;
+        }
+    }
 }
 
 @media (max-width: 840px){

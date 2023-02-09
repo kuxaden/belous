@@ -292,6 +292,7 @@
     }
     & .table {
         margin-bottom: 80px;
+
     }
     @extend %kolco;
 
@@ -322,6 +323,7 @@
         line-height: 30px; 
         border-radius: 10px;
         background-color: $bcg1;
+        height: 400px;
     }
 
 }
